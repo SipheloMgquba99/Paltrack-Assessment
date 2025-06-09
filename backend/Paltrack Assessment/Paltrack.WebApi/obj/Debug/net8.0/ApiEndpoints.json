@@ -1,0 +1,165 @@
+[
+  {
+    "ContainingType": "Paltrack.WebApi.Controllers.LogisticPartnersController",
+    "Method": "GetQueryable",
+    "RelativePath": "api/LogisticPartners/logistics-partners",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RequireTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequireGroupCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsCountQuery",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsSummaryQuery",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Take",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sort",
+        "Type": "DevExtreme.AspNet.Data.SortingInfo[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Group",
+        "Type": "DevExtreme.AspNet.Data.GroupingInfo[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.Collections.IList",
+        "IsRequired": false
+      },
+      {
+        "Name": "TotalSummary",
+        "Type": "DevExtreme.AspNet.Data.SummaryInfo[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "GroupSummary",
+        "Type": "DevExtreme.AspNet.Data.SummaryInfo[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Select",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreSelect",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RemoteSelect",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RemoteGrouping",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExpandLinqSumType",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrimaryKey",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DefaultSort",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StringToLower",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PaginateViaPrimaryKey",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortByPrimaryKey",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AllowAsyncOverSync",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DevExtreme.AspNet.Data.ResponseModel.LoadResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Paltrack.WebApi.Controllers.UsersController",
+    "Method": "LoginUserAsync",
+    "RelativePath": "api/Users/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Paltrack.Application.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Paltrack.WebApi.Controllers.UsersController",
+    "Method": "RegisterUserAsync",
+    "RelativePath": "api/Users/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerUserDto",
+        "Type": "Paltrack.Application.Dtos.RegisterUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

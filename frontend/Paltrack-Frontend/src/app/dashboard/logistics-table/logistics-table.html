@@ -1,0 +1,107 @@
+<div class="grid-container">
+    <h2 class="grid-heading">Logistics Partners</h2>
+
+    <dx-data-grid
+        #dataGrid
+        [dataSource]="dataSource"
+        [remoteOperations]="{ paging: true, filtering: true, sorting: true, grouping: true }"
+        [paging]="{ pageSize: pageSize }"
+        [pager]="{
+            visible: true,
+            displayMode: 'compact',
+            showPageSizeSelector: true,
+            allowedPageSizes: [10, 20, 50],
+            showNavigationButtons: true,
+            showInfo: true,
+            infoText: paginationSummary
+        }"
+        [showBorders]="true"
+        [showRowLines]="true"
+        [showColumnLines]="true"
+        [hoverStateEnabled]="true"
+        [allowColumnResizing]="true"
+        [allowColumnReordering]="true"
+        [columnAutoWidth]="true"
+        [rowAlternationEnabled]="true"
+        keyExpr="id"
+        class="styled-grid"
+        (onContentReady)="onContentReady()"
+        (onOptionChanged)="onOptionChanged($event)"
+    >
+        <dxo-toolbar>
+            <dxi-item location="before">
+                <dx-button
+                    text="Export"
+                    icon="exportxlsx"
+                    (onClick)="exportGrid()"
+                ></dx-button>
+            </dxi-item>
+        </dxo-toolbar>
+        <dxo-search-panel
+            [visible]="true"
+            [width]="240"
+            placeholder="Search..."
+        ></dxo-search-panel>
+        <dxo-filter-row [visible]="true"></dxo-filter-row>
+        <dxo-header-filter [visible]="true"></dxo-header-filter>
+        <dxo-sorting mode="multiple"></dxo-sorting>
+        <dxo-group-panel
+            [visible]="true"
+            [allowColumnDragging]="true"
+        ></dxo-group-panel>
+        <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+        <dxo-editing
+            mode="cell"
+            [allowUpdating]="true"
+            [allowAdding]="false"
+            [allowDeleting]="false"
+        ></dxo-editing>
+        <dxo-export
+            [enabled]="true"
+            fileName="Logistics_Partners"
+            [allowExportSelectedData]="true"
+        ></dxo-export>
+        <dxi-column
+            dataField="company"
+            caption="Company Name"
+            [width]="200"
+            [allowGrouping]="true"
+        >
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+        </dxi-column>
+
+        <dxi-column
+            dataField="city"
+            caption="City"
+            [width]="150"
+            [allowGrouping]="true"
+        ></dxi-column>
+
+        <dxi-column
+            dataField="country"
+            caption="Country"
+            [width]="150"
+            [allowGrouping]="true"
+        ></dxi-column>
+
+        <dxi-column
+            dataField="phone"
+            caption="Phone Number"
+            [width]="150"
+        ></dxi-column>
+
+        <dxi-column dataField="email" caption="Email" [width]="200">
+            <dxi-validation-rule type="email"></dxi-validation-rule>
+        </dxi-column>
+
+        <dxi-column
+            dataField="date"
+            caption="Registration Date"
+            dataType="date"
+            format="yyyy-MM-dd"
+            [width]="130"
+            [allowSorting]="true"
+            [allowFiltering]="true"
+        ></dxi-column>
+    </dx-data-grid>
+</div>
